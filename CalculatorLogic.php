@@ -3,7 +3,7 @@
 
 class CalculatorLogic
 {
-  /**
+    /**
      * To hold base price
      * @var float
      */
@@ -44,7 +44,16 @@ class CalculatorLogic
             throw new Exception('Estimated value of the car is required');
         } else {
             $this->value = (int)$posts['estimatedValue'];
-            $this->basePrice = $this->value * 0.11;
+            $dayOfWeek = date("l");
+            $timeOfDay = date("g:i a");
+            $surgeOpeningTime = strtotime("3:00 pm");
+            $surgeClosingTime = $surgeOpeningTime + (5 * 60 * 60);
+            $currentTime = strtotime($timeOfDay);
+            if($dayOfWeek == 'Friaday' && $currentTime >= $surgeOpeningTime && $currentTime <= $surgeClosingTime) {
+                $this->basePrice = $this->value * 0.13;
+            } else {
+                $this->basePrice = $this->value * 0.11;
+            }
         }
 
         $this->commission = $this->basePrice * 0.17;
@@ -73,6 +82,7 @@ class CalculatorLogic
         $base = round($this->basePrice / $instalments, 2);
         $commission = round($this->commission / $instalments, 2);
         $tax = round($this->tax / $instalments, 2);
+        var_dump($tax);
 
         for ($i = 0; $i < $instalments; $i++) {
             if ($i == $instalments - 1) {
@@ -115,6 +125,6 @@ class CalculatorLogic
      */
     public function toJson() : string
     {
-      return json_encode($this->toArray(), http_response_code(200));
+        return json_encode($this->toArray(), http_response_code(200));
     }
 }
