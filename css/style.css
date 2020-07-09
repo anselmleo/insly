@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-image: url("../images/left_image.jpg"); */
+  background-color: gray;
+}
+
+.container {  
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#TASKTWO {
+  padding-right: 40px;
+  font-weight: 900px;
+}
+
+.center-section-second-content {
+  margin: 10px 0;
+}
+
+.center-content-line {
+  margin: 10px 0;
+}
+
+.header-logo {
+  width: 50%;
+  height: 50%;
+}
+
+.selected {
+  margin-top: 10px;
+  width: 50px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: x-small;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 166, 0, 0.8);
+}
+
+.input-form {
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 50px;
+}
+
+.input-form header {
+  font-weight: bolder;
+  color: white;
+}
+
+.form-header {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.form-link {
+  color: rgba(255, 166, 0, 0.8);
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.form-header a {
+  text-decoration: none;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.561);
+}
+
+.input-label {
+  font-size: xx-small;
+}
+
+.input-element {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid .1px rgba(255, 255, 255, 0.383);
+  margin-top: 5px;
+  padding-left: 20px;
+  background-color: rgba(255, 255, 255, 0.212);
+  color: white;
+}
+
+.input-element::placeholder { 
+  color: white;
+  opacity: .8; 
+  font-size: smaller;
+}
+
+.input-element:focus {
+  outline: none !important;
+  border:1px solid rgba(255, 166, 0, 0.8);
+  /* box-shadow: 0 0 10px #719ECE; */
+}
+
+.form-input-button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 166, 0, 0.8);
+  color: rgba(255, 255, 255, 0.664);
+  font-size: x-small;
+  font-weight: bolder;
+}
+
+.form-input-button:active {
+  border: solid 1px red;
+  border-color: chartreuse;
+}
+
+#result-table {
+  margin: 10px 0;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: solid 1px black;
+  padding: 10px;
+}
+
+.errors {
+  padding: 10px 0;
+  margin: 10px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 166, 0, 0.8)
+}
