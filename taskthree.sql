@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `insly_employees` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 INSERT INTO `insly_employees` (`id`, `first_name`, `last_name`, `birthday`, `ssn`, `is_current`, `email`, `phone`, `address`, `created_by`, `created_at`, `updated_by`, `updated_at`) VALUES
-(1, 'Anselm', 'Mba', '1987-04-04', '123-45-6789', 1, 'anselmmba@insly.com', '+0123456789', '33 Bode Thomas, Lagos, Nigeria', 'Anselm', '2020-07-10 10:35:02', 'Anselm', '2020-07-10 11:38:23');
+(1, 'Anselm', 'Mba', '1984-06-06', '123-45-6789', 1, 'anselmmba@insly.com', '+0123456789', '33 Bode Thomas, Lagos, Nigeria', 'Anselm', '2020-07-10 10:35:02', 'Anselm', '2020-07-10 11:38:23');
 
 CREATE TABLE IF NOT EXISTS `insly_employee_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

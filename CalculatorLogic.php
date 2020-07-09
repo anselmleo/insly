@@ -82,7 +82,6 @@ class CalculatorLogic
         $base = round($this->basePrice / $instalments, 2);
         $commission = round($this->commission / $instalments, 2);
         $tax = round($this->tax / $instalments, 2);
-        var_dump($tax);
 
         for ($i = 0; $i < $instalments; $i++) {
             if ($i == $instalments - 1) {
@@ -110,11 +109,11 @@ class CalculatorLogic
     public function toArray() : array
     {
         return [
-            'base_price' => $this->basePrice,
-            'commission' => $this->commission,
-            'tax' => $this->tax,
+            'base_price' => round($this->basePrice),
+            'commission' => round($this->commission),
+            'tax' => round($this->tax),
             'total' => round($this->basePrice + $this->commission + $this->tax, 2),
-            'value' => $this->value,
+            'value' => round($this->value),
             'payments' => $this->payments
         ];
     }
