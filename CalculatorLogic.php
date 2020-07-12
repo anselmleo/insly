@@ -49,7 +49,7 @@ class CalculatorLogic
             $surgeOpeningTime = strtotime("3:00 pm");
             $surgeClosingTime = $surgeOpeningTime + (5 * 60 * 60);
             $currentTime = strtotime($timeOfDay);
-            if($dayOfWeek == 'Friaday' && $currentTime >= $surgeOpeningTime && $currentTime <= $surgeClosingTime) {
+            if($dayOfWeek == 'Friday' && $currentTime >= $surgeOpeningTime && $currentTime <= $surgeClosingTime) {
                 $this->basePrice = $this->value * 0.13;
             } else {
                 $this->basePrice = $this->value * 0.11;
